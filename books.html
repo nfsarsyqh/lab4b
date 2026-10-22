@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Information</title>
+</head>
+<body>
+
+    <h2>Book Information</h2>
+    <div id="result">Loading books...</div>
+
+    <script>
+        fetch("books.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Unable to load books");
+                }
+                return response.json();
+            })
+            .then(data => {
+                let books = data.books;
+                let result = document.getElementById("result");
+
+                result.textContent =
+                    "First Book Title: " + books[0].title +
+                    "\nSecond Book Author: " + books[1].author +
+                    "\n" + books[0].title + " - " +
+                    books[0].genres.join(", ") +
+                    "\n" + books[1].title + " - " +
+                    books[1].genres.join(", ");
+
+                result.style.whiteSpace = "pre-line";
+            })
+            .catch(error => {
+                document.getElementById("result").textContent =
+                    "Error: Unable to load book data.";
+            });
+    </script>
+
+</body>
+</html>
