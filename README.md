@@ -28,14 +28,17 @@ The `jquery-dom.html` file uses jQuery to change text, add a CSS class and displ
 ## Screenshots
 
 ### Question 1: JSON Data
-Insert screenshot of books.json here.
+![Q1 JSON Data](screenshots/q1-json.png)
 
 ### Question 2: Display Book Information
-Insert screenshot of the browser output here.
+![Q2 Fetch Output](screenshots/q2-fetch-output.png)
 
 ### Question 3: jQuery DOM Operations
-Insert screenshot of the modified text and coral background here.
-Insert screenshot of the button alert here.
+![Q3 jQuery Output](screenshots/q3-jquery-output.png)
+
+**Button Alert:**
+
+![Q3 Button Alert](screenshots/q3-button-alert.png)
 
 ## Conclusion
 
